@@ -1,0 +1,222 @@
+* {
+	box-sizing: border-box;
+}
+
+:root {
+	--fondoPrimario: #7c2c2c;
+	--colorOscuro: #1A1E21;
+	--azulPrimario: #38ec71;
+	--azulSecundario: #2cad5c;
+}
+
+body {
+	background: rgb(255, 255, 255);
+	display: flex;
+	flex-direction:column;
+	align-items: center;
+	justify-content: center;
+	min-height: 100vh;
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+}
+
+
+
+.contenedor {
+	max-width: 800px;
+	width: 90%;
+	padding: 30px;
+	border-radius: 20px;
+    background-color: #f4f4f4;
+}
+
+.titulo {
+	text-align: center;
+	color: black;
+	margin-bottom: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/*  */
+
+.formulario .grupo {
+	margin-bottom: 60px;
+}
+
+.formulario .grupo > input {
+	height: 50px;
+	width: 100%;
+    font-size: 17px;
+	border-radius: 3px;
+	border: none;
+	padding: 20px;
+	border: 1px solid rgba(0,0,0,.2);
+}
+
+.formulario .grupo > label {
+	display: block;
+	font-size: 19px;
+    font-weight: bold;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	margin-bottom: 18px;
+}
+
+.formulario .radio input,
+.formulario .checkbox input {
+	margin-right: 10px;
+}
+
+.formulario .checkbox label {
+	margin-right: 20px;
+}
+
+
+.boton {
+    width: 100%;
+    font-size: 17px;
+	background: var(--azulPrimario);
+	display: inline-block;
+	padding: 25px;
+	border: none;
+	color: #fff;
+	border-radius: 5px;
+	margin-bottom: 20px;
+}
+
+.boton:hover {
+	background: var(--azulSecundario);
+    cursor: pointer;
+    transition: .3s;
+}
+
+
+/*  */
+
+.formulario .nombre:focus {
+	border: 3px solid var(--azulPrimario);
+}
+
+.formulario .id:disabled {
+	background: var(--fondoPrimario);
+}
+
+.formulario .correo:valid {
+	background: rgb(158, 248, 144);
+	border: none;
+}
+
+.formulario .correo:invalid {
+	background: #c0c0c0;
+	border: none;
+}
+
+.formulario .radio input:checked {
+	transform: scale(1.5);
+}
+
+.fondo{
+	background-color: white;
+	font-size: 30px;
+	margin: 30px;
+	padding: 20px;
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+header{
+    background-color: rgb(230, 253, 235);
+}
+
+
+	header .logo{/* lo que esté adentro de header con esa notación */
+		margin: 0;
+		padding: 25px 30px;/* primer valor padding arriba y abajo, segundo costados */
+		background-size:cover;
+		background-repeat: no-repeat;
+		background-image: url(img/logosin.png);
+		width: 150px;
+		height: 37.5px;
+	
+	
+	}
+
+
+
+header .container{
+    display: flex;/* para centrarlo */
+    flex-direction: column;/* hace que las cosas se ordenen en una columna */
+    align-items: center;
+
+}
+
+header nav{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding-bottom: 25px;
+}
+
+
+header a{
+    padding: 5px 12px;
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
+}
+
+header :hover{
+    color: rgb(62, 183, 76);
+    text-decoration: underline;
+}
+
+header .logo{
+	width: 300px;
+	height: 75px;
+}
+
+@media (min-width:720px) {
+
+	header{
+        position: fixed;
+        width: 100%;
+		top: 0;
+		left: 0;
+		right: 0;
+    }
+
+    header a{
+        padding: 5px 12px;
+        font-size: 1.5rem;
+        text-decoration: none;
+        font-weight: bold;
+        color: black;
+    }
+
+    header .logo{
+        width: 300px;
+        height: 75px;
+    }
+
+    header .container{
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    header nav{
+        flex-direction: row;
+        padding-bottom: 0;
+        padding-right: 20px;
+    }
+}
+
+.big{
+    font-size: 1.8rem;
+}
+
+.iconocarro{
+	width: 100px;
+	height: 100px;
+	background-image: url(img/iconocarro.png);
+	background-size: contain;
+	border-style: double;
+	border-radius: 50px;
+}
